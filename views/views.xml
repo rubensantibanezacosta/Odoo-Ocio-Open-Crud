@@ -1,5 +1,67 @@
 <odoo>
   <data>
+
+        <!-- VISTAS DE OCIO OPEN -->
+
+    <!-- VISTA HEREDADA RES.PARTNER CON INCIDENCIAS -->
+    <record id="view_users_form_inherit_mail_users" model="ir.ui.view">
+      <field name="name">res.users.view.form.inherit.mail</field>
+      <field name="model">res.users</field>
+      <field name="inherit_id" ref="base.view_users_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='login']" position="after">
+          <p>Puntuación</p>
+            <field name="punctuation_avg" />
+          <p>Última actividad</p>  
+            <field name="lastconnection" />   
+        </xpath>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ocio__open.action_window">
+      <field name="name">Ocio_Open window</field>
+      <field name="res_model">ocio__open.ocio__open</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ocio__open.action_server">
+      <field name="name">Ocio_Open server</field>
+      <field name="model_id" ref="model_ocio__open_ocio__open"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Ocio_Open" id="ocio__open.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ocio__open.menu_1" parent="ocio__open.menu_root"/>
+    <menuitem name="Menu 2" id="ocio__open.menu_2" parent="ocio__open.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ocio__open.menu_1_list" parent="ocio__open.menu_1"
+              action="ocio__open.action_window"/>
+    <menuitem name="Server to list" id="ocio__open" parent="ocio__open.menu_2"
+              action="ocio__open.action_server"/>
+-->
+
+
     <!-- explicit list view definition -->
 <!--
     <record model="ir.ui.view" id="ocio__open.list">
