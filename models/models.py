@@ -26,16 +26,16 @@ class ocio__open_ocio__open_events(models.Model):
     _description = 'ocio__open.ocio__open_events'
 
     
-    tittle = fields.Char(string="Titulo")
-    date = fields.Datetime(string="Fecha y Hora")
-    zone = fields.Char(string="Zona")
+    tittle = fields.Char(string="Titulo", required=True)
+    date = fields.Datetime(string="Fecha y Hora" , required=True)
+    zone = fields.Selection([('GC', 'Gran Canaria'),('TNF', 'Tenerife'),('VIRTUAL', 'Virtual'),('Others', 'Otros')],default="GC", string="Zona" , required=True)
     place = fields.Char(string="Rol")
     description = fields.Text(string="Descripción")
-    punctuation_avg = fields.Float(string="Puntuacion media")
-    organizer = fields.Many2one("res.users", string="Organizador" , ondelete="cascade")
+    punctuation_avg = fields.Float(string="Puntuacion media", default=0, readonly=True)
+    organizer = fields.Many2one("res.users", string="Organizador" , ondelete="cascade", required=True)
     image_id = fields.Many2one("ocio__open.ocio__open_images", string="Imagen", null=True , ondelete="cascade")
-    createdAt=fields.Date(string="Fecha de registro", auto_now_add=True)
-    updatedAt=fields.Date(string="Ultima modificación", auto_now=True)
+    createdAt=fields.Date(string="Fecha de registro", auto_now_add=True, readonly=True)
+    updatedAt=fields.Date(string="Ultima modificación", auto_now=True, readonly=True)
 
 
     #  @api.depends('value')
@@ -48,7 +48,7 @@ class ocio__open_ocio__open_images(models.Model):
     _description = 'ocio__open.ocio__open_images'
 
     
-    url = fields.Char(string="Imagen")
+    url = fields.Char(string="Imagen" , required=True)
     render = fields.Binary(string='Image', compute='_renderImageFromUrl', store=True, attachment=False)
     createdAt=fields.Date(string="Fecha de registro", auto_now_add=True)
     updatedAt=fields.Date(string="Ultima modificación", auto_now=True)

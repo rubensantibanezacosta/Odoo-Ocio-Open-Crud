@@ -10,10 +10,10 @@
       <field name="inherit_id" ref="base.view_users_form" />
       <field name="arch" type="xml">
         <xpath expr="//field[@name='login']" position="after">
-          <p>Puntuación</p>
-            <field name="punctuation_avg" />
-          <p>Última actividad</p>  
-            <field name="lastconnection" />   
+          <p style="font-size:12px;">Puntuación</p>
+            <field name="punctuation_avg" style="color:blue; font-style:italic;" />
+          <p style="font-size:12px;">Última actividad</p>  
+            <field name="lastconnection"  style="color:blue; font-style:italic;"/>   
         </xpath>
       </field>
     </record>
@@ -21,7 +21,7 @@
 
     <!-- VISTAS DE EVENTOS SOCIALES -->
     <record model="ir.ui.view" id="ocio__open.ocio__open_events_tree">
-      <field name="name">ocio__open.ocio__open_events.tree</field>
+      <field name="name">Eventos</field>
       <field name="model">ocio__open.ocio__open_events</field>
       <field name="arch" type="xml">
         <tree>
@@ -40,7 +40,7 @@
     </record>
   
     <record model="ir.ui.view" id="ocio__open.ocio__open_events_form">
-      <field name="name">ocio__open.ocio__open_events.form</field>
+      <field name="name">Eventos</field>
       <field name="model">ocio__open.ocio__open_events</field>
       <field name="arch" type="xml">
         <form>
@@ -62,7 +62,7 @@
         <!-- VISTAS DE IMAGENES DE FONDO -->
 
         <record model="ir.ui.view" id="ocio__open.ocio__open_images_tree">
-          <field name="name">ocio__open.ocio__open_images.tree</field>
+          <field name="name">Imagenes</field>
           <field name="model">ocio__open.ocio__open_images</field>
           <field name="arch" type="xml">
             <tree>
@@ -73,7 +73,7 @@
         </record>
       
         <record model="ir.ui.view" id="ocio__open.ocio__open_images_form">
-          <field name="name">ocio__open.ocio__open_images.form</field>
+          <field name="name">Imagenes</field>
           <field name="model">ocio__open.ocio__open_images</field>
           <field name="arch" type="xml">
             <form>
@@ -88,13 +88,13 @@
 
 
         <record model="ir.actions.act_window" id="ocio__open.ocio__open_events_action_window">
-          <field name="name">ocio__open.ocio__open_events.action.window</field>
+          <field name="name">Eventos</field>
           <field name="res_model">ocio__open.ocio__open_events</field>
           <field name="view_mode">tree,form</field>
         </record>
     
         <record model="ir.actions.act_window" id="ocio__open.ocio__open_images_action_window">
-          <field name="name">ocio__open.ocio__open_images.action.window</field>
+          <field name="name">Imagenes</field>
           <field name="res_model">ocio__open.ocio__open_images</field>
           <field name="view_mode">tree,form</field>
         </record>
