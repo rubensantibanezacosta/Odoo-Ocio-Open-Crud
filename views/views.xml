@@ -19,6 +19,97 @@
     </record>
 
 
+    <!-- VISTAS DE EVENTOS SOCIALES -->
+    <record model="ir.ui.view" id="ocio__open.ocio__open_events_tree">
+      <field name="name">ocio__open.ocio__open_events.tree</field>
+      <field name="model">ocio__open.ocio__open_events</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="tittle" />
+          <field name="date" />
+          <field name="zone" />
+          <field name="description" />
+          <field name="punctuation_avg" />
+          <field name="organizer" />
+          <field name="image_id" />
+          <field name="createdAt" />
+          <field name="updatedAt" />
+          
+        </tree>
+      </field>
+    </record>
+  
+    <record model="ir.ui.view" id="ocio__open.ocio__open_events_form">
+      <field name="name">ocio__open.ocio__open_events.form</field>
+      <field name="model">ocio__open.ocio__open_events</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="tittle" />
+            <field name="date" />
+            <field name="zone" />
+            <field name="description" />
+            <field name="punctuation_avg" />
+            <field name="organizer" />
+            <field name="image_id" />
+            <img src="{% static image_id.path %}" />
+            <field name="createdAt" />
+            <field name="updatedAt" />
+          </group>
+        </form>
+      </field>
+    </record>
+
+        <!-- VISTAS DE IMAGENES DE FONDO -->
+
+        <record model="ir.ui.view" id="ocio__open.ocio__open_images_tree">
+          <field name="name">ocio__open.ocio__open_images.tree</field>
+          <field name="model">ocio__open.ocio__open_images</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="url" />
+              <field name="createdAt" />
+            </tree>
+          </field>
+        </record>
+      
+        <record model="ir.ui.view" id="ocio__open.ocio__open_images_form">
+          <field name="name">ocio__open.ocio__open_images.form</field>
+          <field name="model">ocio__open.ocio__open_images</field>
+          <field name="arch" type="xml">
+            <form>
+              <group colspan="2" col="2">
+                <img src="{% static image_id.path %}" />
+                <field name="createdAt" />
+              </group>
+            </form>
+          </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="ocio__open.ocio__open_events_action_window">
+          <field name="name">ocio__open.ocio__open_events.action.window</field>
+          <field name="res_model">ocio__open.ocio__open_events</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+    
+        <record model="ir.actions.act_window" id="ocio__open.ocio__open_images_action_window">
+          <field name="name">ocio__open.ocio__open_images.action.window</field>
+          <field name="res_model">ocio__open.ocio__open_images</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+   <!-- MENÚ PRINCIPAL APLICACIÓN OCIO OPEN -->
+   <menuitem name="Ocio Open" id="ocio__open.menu_root" />
+
+   <!-- SUBMENÚ OCIO OPEN -->
+   <menuitem name="Ocio Open" id="ocio__open.ocio__open_menu" parent="ocio__open.menu_root" />
+
+
+    <!-- OPCIONES DEL MENÚ -->
+    <menuitem name="Eventos" id="ocio__open.ocio__open_menu_events" parent="ocio__open.ocio__open_menu" action="ocio__open.ocio__open_events_action_window" />
+    <menuitem name="Imagenes" id="ocio__open.ocio__open_menu_images" parent="ocio__open.ocio__open_menu" action="ocio__open.ocio__open_images_action_window" />
+
     <!-- actions opening views on models -->
 <!--
     <record model="ir.actions.act_window" id="ocio__open.action_window">

@@ -32,7 +32,7 @@ class ocio_events(models.Model):
     image_id = fields.One2many("ocio__open.ocio__open_images", "url",string="Imagen", null=True , ondelete="cascade")
     createdAt=fields.Date(string="Fecha de registro", auto_now_add=True)
     updatedAt=fields.Date(string="Ultima modificación", auto_now=True)
-    lastconnection=fields.Date(string="Ultima conexión")
+
 
     #  @api.depends('value')
     #  def _value_pc(self):
