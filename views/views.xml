@@ -52,7 +52,6 @@
             <field name="punctuation_avg" />
             <field name="organizer" />
             <field name="image_id" />
-            <img src="{% static image_id.path %}" />
             <field name="createdAt" />
             <field name="updatedAt" />
           </group>
@@ -79,7 +78,8 @@
           <field name="arch" type="xml">
             <form>
               <group colspan="2" col="2">
-                <img src="{% static image_id.path %}" />
+                <field name="url" />
+                <field name="render" widget="image" />
                 <field name="createdAt" />
               </group>
             </form>
@@ -98,6 +98,8 @@
           <field name="res_model">ocio__open.ocio__open_images</field>
           <field name="view_mode">tree,form</field>
         </record>
+
+    
 
    <!-- MENÚ PRINCIPAL APLICACIÓN OCIO OPEN -->
    <menuitem name="Ocio Open" id="ocio__open.menu_root" />
