@@ -1,4 +1,4 @@
-[volver al readme](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud)
+[Volver al Readme](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud)
 
 ## REQUISITOS
 
