@@ -22,7 +22,7 @@ Desde Github: https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud
 ## Prerequisitos
 
 Necesitas un entorno de desarrollo con:
-* [Sistema operativo linux]
+* [Sistema operativo linux](https://www.linux.org/).
 * [Git](https://git-scm.com) -  https://git-scm.com/downloads.
 * [Docker](https://www.docker.com/) - https://www.docker.com/products/docker-desktop.
 * [Python](https://www.python.org/downloads/) -  https://www.python.org/downloads/.
