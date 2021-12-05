@@ -24,6 +24,7 @@ class ocio_users(models.Model):
 class ocio__open_ocio__open_events(models.Model):
     _name = 'ocio__open.ocio__open_events'
     _description = 'ocio__open.ocio__open_events'
+    _inherit=['mail.thread','mail.activity.mixin']
 
     
     tittle = fields.Char(string="Titulo", required=True)

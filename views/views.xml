@@ -55,6 +55,11 @@
             <field name="createdAt" />
             <field name="updatedAt" />
           </group>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user" />
+            <field name="activity_ids" widget="mail_activity" />
+            <field name="message_ids" widget="mail_thread" />
+          </div>
         </form>
       </field>
     </record>
@@ -99,20 +104,19 @@
               <div class="oe_kanban_global_click">
                 <div class="o_kanban_image">
                   <img t-att-src="kanban_image('ocio__open.ocio__open_images','render', record.id.raw_value)" />
-                  
                 </div>
                 <div class="oe-kanban-details">
                   <strong>
                     Url
                     <br />
                   </strong>
-                  
                   <field name="url" />
                 </div>
               </div>
             </t>
           </templates>
         </kanban>
+
       </field>
     </record>
 
