@@ -1,5 +1,5 @@
 
-[View in English]()
+[View in English](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud/blob/main/docs/EnglishReadme.md)
 
 # Ocio Open Odoo Crud  *(Proyecto formativo)*
 
