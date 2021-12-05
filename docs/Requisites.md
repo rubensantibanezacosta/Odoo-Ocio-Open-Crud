@@ -1,4 +1,4 @@
-[Back to Readme](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud/docs/EnglishReadme.md)
+[Back to Readme](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud/blob/main/docs/EnglishReadme.md)
 
 ## REQUISITES
 
