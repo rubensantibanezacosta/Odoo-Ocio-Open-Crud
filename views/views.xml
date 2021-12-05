@@ -59,6 +59,9 @@
       </field>
     </record>
 
+
+    
+
         <!-- VISTAS DE IMAGENES DE FONDO -->
 
         <record model="ir.ui.view" id="ocio__open.ocio__open_images_tree">
