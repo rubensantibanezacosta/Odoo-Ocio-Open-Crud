@@ -14,6 +14,8 @@
           <field name="punctuation_avg" style="color:blue; font-style:italic;" />
           <p style="font-size:12px;">Última actividad</p>
           <field name="lastconnection" style="color:blue; font-style:italic;" />
+          <p style="font-size:12px;">Eventos Organizados</p>
+          <field name="events" style="color:blue; font-weight:lighter; font-size:12px;"/>
         </xpath>
       </field>
     </record>
@@ -68,7 +70,7 @@
     <!-- VISTAS DE IMAGENES DE FONDO -->
 
     <record model="ir.ui.view" id="ocio__open.ocio__open_images_tree">
-      <field name="name">Imagenes</field>
+      <field name="name">Galería</field>
       <field name="model">ocio__open.ocio__open_images</field>
       <field name="arch" type="xml">
         <tree>
@@ -79,7 +81,7 @@
     </record>
 
     <record model="ir.ui.view" id="ocio__open.ocio__open_images_form">
-      <field name="name">Imagenes</field>
+      <field name="name">Galería</field>
       <field name="model">ocio__open.ocio__open_images</field>
       <field name="arch" type="xml">
         <form>
@@ -128,7 +130,7 @@
     </record>
 
     <record model="ir.actions.act_window" id="ocio__open.ocio__open_images_action_window">
-      <field name="name">Imagenes</field>
+      <field name="name">Galería</field>
       <field name="res_model">ocio__open.ocio__open_images</field>
       <field name="view_mode">tree,form,kanban</field>
     </record>

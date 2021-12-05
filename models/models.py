@@ -14,6 +14,7 @@ class ocio_users(models.Model):
 
     punctuation_avg = fields.Float(string = 'Puntuacion media')
     lastconnection=fields.Datetime(string = 'Ultima conexión')
+    events=fields.One2many("ocio__open.ocio__open_events", "organizer", string="Eventos")
 
 
     #  @api.depends('value')
