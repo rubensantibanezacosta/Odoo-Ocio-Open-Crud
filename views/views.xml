@@ -16,6 +16,8 @@
           <field name="lastconnection" style="color:blue; font-style:italic;" />
           <p style="font-size:12px;">Eventos Organizados</p>
           <field name="events" style="color:blue; font-weight:lighter; font-size:12px;"/>
+         
+
         </xpath>
       </field>
     </record>

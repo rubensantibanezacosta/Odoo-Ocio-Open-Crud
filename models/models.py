@@ -15,6 +15,7 @@ class ocio_users(models.Model):
     punctuation_avg = fields.Float(string = 'Puntuacion media')
     lastconnection=fields.Datetime(string = 'Ultima conexión')
     events=fields.One2many("ocio__open.ocio__open_events", "organizer", string="Eventos")
+    
 
 
     #  @api.depends('value')
@@ -40,10 +41,9 @@ class ocio__open_ocio__open_events(models.Model):
     updatedAt=fields.Date(string="Ultima modificación", auto_now=True, readonly=True)
 
 
-    #  @api.depends('value')
-    #  def _value_pc(self):
-    #      for record in self:
-    #          record.value2 = float(record.value) / 100
+    @api.model
+    def _value_pc(self):
+       res = super(ocio__open_ocio__open_events).create()
 
 class ocio__open_ocio__open_images(models.Model):
     _name = 'ocio__open.ocio__open_images'
