@@ -19,6 +19,7 @@ Link de descarga:
 
 Desde Github: https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud
 
+
 ## Prerequisitos
 
 Necesitas un entorno de desarrollo con:
@@ -81,6 +82,7 @@ Clone el repositorio en su carpeta Extra-addons:
 ```
 git clone https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud
 ```
+Deberá renombrar la carpeta que contiene la aplicación con el nombre "ocio__open"
 
 Abra su nagegador el la dirección http://localhost:8069/
 

@@ -12,7 +12,7 @@ The project consists of the Crud to manage events, load images through "Url", an
 
 ## Project Documentation
 
-- [Application requirements report](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud/blob/main/docs/Requisitos.md)
+- [Application requirements report](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud/blob/main/docs/Requisites.md)
 
 ## Starting
 
